@@ -1,0 +1,19 @@
+<script>
+  async function typeSentence(el, delay = 20) {
+    const textArray = el.innerHTML.split("");
+    el.innerHTML = "";
+    let i = 0;
+    while (i < textArray.length) {
+      await waitForMs(delay);
+      el.innerHTML += textArray[i];
+      i++;
+    }
+    return;
+  }
+
+  function waitForMs(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  typeSentence(text);
+</script>

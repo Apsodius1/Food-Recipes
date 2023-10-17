@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/main.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello</h1>
-</body>
+  <%- include("partials/head.ejs") %>
+  <body>
+    <% if(locals.text) { %> 
+      <%- include("pages/quotes.ejs") %> 
+    <% } else { %>
+      <%- include("pages/button.ejs") %> 
+    <% } %>
+  </body>
+  <%- include("partials/scripts.ejs") %>
 </html>

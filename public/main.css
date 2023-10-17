@@ -1,0 +1,185 @@
+/* General */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+footer {
+  align-self: flex-start;
+  padding: 12px;
+  color: #b0b0cb;
+  /* -webkit-text-stroke: 0.1px black; */
+}
+
+/*Page after click */
+
+.text-white {
+  color: #c3fcf1;
+  padding: 8%;
+}
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+
+  background-image: linear-gradient(
+    to right top,
+    #cf67d9,
+    #ba74e4,
+    #a580eb,
+    #8f89ee,
+    #7b91ee,
+    #7b91ee,
+    #7b91ee,
+    #7b91ee,
+    #8f89ee,
+    #a580eb,
+    #ba74e4,
+    #cf67d9
+  );
+}
+
+/* Page before click */
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+
+  background-color: #fff6ff;
+}
+.button-content {
+  background: #fff6ff;
+  padding: 112px;
+  border-radius: 50%;
+}
+
+.cool-hover {
+  text-decoration: none;
+  color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  margin-top: 15%;
+  width: 250px;
+  height: 250px;
+  background: #fff6ff;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.cool-hover:hover {
+  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+}
+
+.cool-hover:hover::before,
+.cool-hover:hover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #6499e9;
+  border-radius: 50%;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.cool-hover:hover:after {
+  background: #cf67d9;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;
+  }
+}
